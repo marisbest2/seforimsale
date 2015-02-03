@@ -10,7 +10,7 @@ function getTimeInFractionalHours(d) {
 }
 function openingTimes(d) {
     if (d.getYear() != 2015) {
-        return -1
+        return -1;
     }
     var month = d.getMonth();
     if (month == 2) {
@@ -45,9 +45,9 @@ function openingTimes(d) {
     }
     else if (month == 3) {
         if (d.getDate() == 1) {
-            return [10,22]
+            return [10,22];
         }
-        return -1
+        return -1;
     }
 }
 var times = openingTimes(d);
