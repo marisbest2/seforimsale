@@ -4,7 +4,7 @@
 function setup() {
 var d = new Date();
 function getTimeInFractionalHours(d) {
-    return d.getHours() + d.getMinutes() / 60;
+    return d.getHours() + d.getMinutes() / 60 + 1;
 }
 function openingTimes(d) {
     if (d.getYear() != 2015) {
