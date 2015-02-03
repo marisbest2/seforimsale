@@ -61,7 +61,8 @@ else {
     }
 }
 var magic8ball = ["Anything is possible", "Who knows?", "Today may be your lucky day!", "Check the cookbook section for a special surprise!", "Your Bashert was there yesterday, sorry.", "Today you find THE ONE"];
-document.getElementById("shidduch").innerHTML = magic8Ball[Math.floor(Math.random() * (magic8ball.length))];
+var el = magic8ball[Math.floor(Math.random() * (magic8ball.length))];
+document.getElementById("shidduch").innerHTML = el;
 }
 </script>
 </head>
