@@ -1,9 +1,10 @@
 <html>
 <head>
 </head>
-<body>
+<body onload="setup()">
 <p>HELLO</p>
 <script type="text/javascript">
+function setup() {
 var d = new Date();
 function getTimeInFractionalHours(d) {
     return d.getHours() + d.getMinutes() / 60;
@@ -63,7 +64,7 @@ else {
     }
 }
 document.getElementById("something").innerHTML = "Not open!";
-
+}
 </script>
 <p id="spot">something?</p>
 <p id="something"></p>
