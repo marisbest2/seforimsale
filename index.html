@@ -7,7 +7,7 @@ function getTimeInFractionalHours(d) {
     return d.getHours() + d.getMinutes() / 60 + 1;
 }
 function openingTimes(d) {
-    if (d.getYear() != 2015) {
+    if (d.getFullYear() != 2015) {
         return -1;
     }
     var month = d.getMonth();
