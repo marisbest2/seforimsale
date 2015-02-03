@@ -52,17 +52,17 @@ function openingTimes(d) {
 }
 var times = openingTimes(d);
 if (times == -1) {
-    document.getElementById("spot").innerHTML = "Not open!"
+    document.getElementById("spot").innerHTML = "Not open!";
 }
 else {
     if (getTimeInFractionalHours(d) < times[1] and getTimeInFractionalHours(d) >= times[0]) {
-        document.getElementById("spot").innerHTML = "Open!"
+        document.getElementById("spot").innerHTML = "Open!";
     }
     else {
-        document.getElementById("spot").innerHTML = "Not open!"
+        document.getElementById("spot").innerHTML = "Not open!";
     }
 }
 </script>
-<p id="spot"></p>
+<p id="spot">something?</p>
 </body>
 </html>
