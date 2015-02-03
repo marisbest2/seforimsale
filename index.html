@@ -54,10 +54,11 @@ if (times == -1) {
 }
 else {
     if (getTimeInFractionalHours(d) < times[1] && getTimeInFractionalHours(d) >= times[0]) {
+        
         document.getElementById("spot").innerHTML = "Open!";
     }
     else {
-        document.getElementById("spot").innerHTML = "Not open!";
+        document.getElementById("spot").innerHTML = "No open anymore!";
     }
 }
 var magic8ball = ["Anything is possible", "Who knows?", "Today may be your lucky day!", "Check the cookbook section for a special surprise!", "Your Bashert was there yesterday, sorry.", "Today you find THE ONE"];
