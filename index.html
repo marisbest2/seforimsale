@@ -1,0 +1,67 @@
+<html>
+<head>
+</head>
+<body>
+<script type="text/javascript">
+var d = new Date();
+function getTimeInFractionalHours(d) {
+    return d.getHours() + d.getMinutes() / 60;
+}
+function openingTimes(d) {
+    if (d.getYear() != 2015) {
+        return -1
+    }
+    var month = d.getMonth();
+    if (month == 2) {
+        switch (d.getDate()) {
+            case 1:
+                return [10,16];
+                break;
+            case 8:
+            case 15:
+            case 22:
+                return [10,22];
+                break;
+            case 16:
+                return [15,22];
+                break;
+            case 5:
+            case 12:
+            case 19:
+            case 26:
+                return [10,23];
+                break;
+            case 7:
+            case 14:
+            case 21:
+            case 28:
+                return [8, 23];
+                break;
+            default:    
+                return [7.5,22.5];
+                break;
+        }
+    }
+    else if (month == 3) {
+        if (d.getDate() == 1) {
+            return [10,22]
+        }
+        return -1
+    }
+}
+var times = openingTimes(d);
+if (times == -1) {
+    document.getElementById("spot").innerHTML = "Not open!"
+}
+else {
+    if (getTimeInFractionalHours(d) < times[1] and getTimeInFractionalHours(d) >= times[0]) {
+        document.getElementById("spot").innerHTML = "Open!"
+    }
+    else {
+        document.getElementById("spot").innerHTML = "Not open!"
+    }
+}
+</script>
+<div id="spot"></div>
+</body>
+</html>
