@@ -1,10 +1,8 @@
 <html>
 <head>
 <script type="text/javascript">
-function setup() {
-var d = new Date();
 function getTimeInFractionalHours(d) {
-    return d.getHours() + d.getMinutes() / 60 + 1;
+    return d.getHours() + d.getMinutes() / 60;
 }
 function openingTimes(d) {
     if (d.getFullYear() != 2015) {
@@ -48,6 +46,8 @@ function openingTimes(d) {
         return -1;
     }
 }
+function setup() {
+var d = new Date();
 var times = openingTimes(d);
 if (times == -1) {
     document.getElementById("spot").innerHTML = "Not open!";
