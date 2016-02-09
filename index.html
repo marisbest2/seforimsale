@@ -6,46 +6,34 @@ function getTimeInFractionalHours(d) {
     return d.getHours() + d.getMinutes() / 60;
 }
 function openingTimes(d) {
-    if (d.getFullYear() != 2015) {
+    if (d.getFullYear() != 2016) {
         return -1;
     }
     var month = d.getMonth();
-    if (month == 1) {
+    if (month == 2) {
         switch (d.getDate()) {
-            case 1:
+            case 7:
                 return [10,16];
                 break;
-            case 8:
             case 15:
-            case 22:
-                return [10,22];
+                return [13,22.5];
                 break;
-            case 16:
-                return [15,22];
-                break;
-            case 5:
             case 12:
             case 19:
             case 26:
-                return [19.5,23];
+                return -1;
                 break;
-            case 7:
-            case 14:
-            case 21:
-            case 28:
-                return [20, 23];
+            case 13:
+            case 20:
+            case 27:
+                return [20,23];
                 break;
             default:    
                 return [19.5,22.5];
                 break;
         }
     }
-    else if (month == 2) {
-        if (d.getDate() == 1) {
-            return [10,22];
-        }
-        return -1;
-    }
+    return -1;
 }
 function setup() {
 var d = new Date();
